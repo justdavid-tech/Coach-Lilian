@@ -24,7 +24,7 @@ export default function HeroSection() {
 
   return (
     <section className='pt-15 sm:pt-15 md:pt-15 lg:pt-15 xl:pt-15'>
-    <div className="relative min-h-screen bg-gradient-to-br from-[#13262F] via-[#0B1922] to-[#13262F] overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-br from-[#13262F] via-[#0B1922] to-[#13262F] overflow-hidden w-full">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-[#EE7B30] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
@@ -126,12 +126,12 @@ export default function HeroSection() {
               </div>
 
               {/* Floating Badge 1 */}
-              <div className="absolute -top-6 -right-6 bg-[#2E8B57] text-white px-6 py-3 rounded-full shadow-lg animate-pulse">
+              <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-0 bg-[#2E8B57] text-white px-4 py-2 rounded-full shadow-lg animate-pulse">
                 <p className="font-bold text-sm">100% Online</p>
               </div>
 
               {/* Floating Badge 2 */}
-              <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white px-6 py-3 rounded-full shadow-lg" style={{ animation: 'float 4s ease-in-out infinite' }}>
+              <div className="absolute bottom-0 left-0 translate-y-1/2 bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white px-4 py-2 rounded-full shadow-lg" style={{ animation: 'float 4s ease-in-out infinite' }}>
                 <p className="font-bold text-sm">Start Today</p>
               </div>
             </div>

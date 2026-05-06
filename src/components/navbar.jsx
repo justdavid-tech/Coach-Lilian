@@ -10,7 +10,7 @@ function Navbar() {
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src="/assets/logo.png" alt="Coach Lilian Logo" className="h-16 w-auto scale-150 origin-center" />
+          <img src="/assets/logo.png" alt="Coach Lilian Logo" className="h-14 w-auto" />
         </Link>
 
         {/* Desktop Menu */}

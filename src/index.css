@@ -2,14 +2,20 @@
 
 @theme {
   /* Primary Brand Colors */
-  --color-primary-dark: #13262F;       /* Jet Black */
-  --color-primary-accent: #EE7B30;     /* Pumpkin Spice */
+  --color-primary-dark: #13262F;
+  /* Jet Black */
+  --color-primary-accent: #EE7B30;
+  /* Pumpkin Spice */
 
   /* Supporting Colors */
-  --color-background-soft: #F9F6F1;    /* Ivory White */
-  --color-neutral-gray: #C9D1D9;       /* Soft Gray */
-  --color-success: #2E8B57;            /* Deep Green */
-  --color-deep-accent: #0B1922;        /* Midnight Blue */
+  --color-background-soft: #F9F6F1;
+  /* Ivory White */
+  --color-neutral-gray: #C9D1D9;
+  /* Soft Gray */
+  --color-success: #2E8B57;
+  /* Deep Green */
+  --color-deep-accent: #0B1922;
+  /* Midnight Blue */
 
   /* Optional: Standard Text Colors */
   --color-text-light: #ffffff;
@@ -17,6 +23,6 @@
 }
 
 body {
-  overflow-x: hidden;
-}
+  overflow-x: hidden !important;
 
+}
