@@ -5,12 +5,12 @@ import { Link } from "react-router-dom"
 export default function CEOStorySection() {
   const [activeTab, setActiveTab] = useState('story');
 
-  const achievements = [
-    { icon: Users, text: 'Trained 1,200+ students across different countries' },
-    { icon: Award, text: 'Certified Career Coach & Remote Work Consultant' },
-    { icon: BookOpen, text: 'Published author and international speaker' },
-    { icon: TrendingUp, text: '92% student success rate in job placement' }
-  ];
+  // const achievements = [
+  //   { icon: Users, text: 'Trained 1,200+ students across different countries' },
+  //   { icon: Award, text: 'Certified Career Coach & Remote Work Consultant' },
+  //   { icon: BookOpen, text: 'Published author and international speaker' },
+  //   { icon: TrendingUp, text: '92% student success rate in job placement' }
+  // ];
 1
   const whyStarted = [
     {
@@ -39,14 +39,14 @@ export default function CEOStorySection() {
   ];
 
   return (
-    <div className="relative py-12 lg:py-32 bg-gradient-to-b from-[#13262F] to-[#0B1922] overflow-hidden">
+    <div className="relative pt-12 pb-12 lg:pt-16 lg:pb-32 bg-gradient-to-b from-[#13262F] to-[#0B1922] overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 -left-20 w-96 h-96 bg-[#EE7B30] rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse"></div>
         <div className="absolute bottom-1/3 -right-20 w-96 h-96 bg-[#2E8B57] rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '1.5s' }}></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6">
+      <div className="relative max-w-7xl sm:max-w-5xl mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-10 lg:mb-16">
           <div className="inline-flex items-center gap-2 bg-[#EE7B30]/10 border border-[#EE7B30]/30 rounded-full px-4 py-2 backdrop-blur-sm mb-6">
@@ -91,7 +91,7 @@ export default function CEOStorySection() {
             </div>
 
             {/* Achievements */}
-            <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-5 lg:p-8 border border-[#C9D1D9]/20">
+            {/* <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-5 lg:p-8 border border-[#C9D1D9]/20">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
                 <Award className="w-7 h-7 text-[#EE7B30]" />
                 Key Achievements
@@ -106,13 +106,13 @@ export default function CEOStorySection() {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Right: Story Content */}
           <div className="space-y-8">
             {/* Tab Navigation */}
-            <div className="flex gap-4 overflow-x-auto pb-2">
+            <div className="flex flex-wrap gap-2 md:gap-4 pb-2">
               {[
                 { id: 'story', label: 'My Story' },
                 { id: 'why', label: 'Why I Started' },
@@ -121,7 +121,7 @@ export default function CEOStorySection() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-3 rounded-full font-semibold whitespace-nowrap transition-all duration-300 ${
+                  className={`px-4 md:px-6 py-2 md:py-3 text-sm md:text-base rounded-full font-semibold whitespace-nowrap transition-all duration-300 ${
                     activeTab === tab.id
                       ? 'bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white shadow-lg'
                       : 'bg-[#F9F6F1]/5 text-[#C9D1D9] border border-[#C9D1D9]/20 hover:border-[#EE7B30]/50'
@@ -135,7 +135,7 @@ export default function CEOStorySection() {
             {/* My Story Tab */}
             {activeTab === 'story' && (
               <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-5 lg:p-8 border border-[#C9D1D9]/20 space-y-6 animate-fadeIn">
-                <h3 className="text-3xl font-bold text-white">My Journey to Remote Work Freedom</h3>
+                <h3 className="text-2xl lg:text-3xl font-bold text-white break-words">My Journey to Remote Work Freedom</h3>
                 
                 <div className="space-y-4 text-[#C9D1D9] leading-relaxed">
                   <p>
@@ -165,7 +165,7 @@ export default function CEOStorySection() {
             {activeTab === 'why' && (
               <div className="space-y-6 animate-fadeIn">
                 <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-5 lg:p-8 border border-[#C9D1D9]/20">
-                  <h3 className="text-3xl font-bold text-white mb-6">Why I Started Lian work from home training</h3>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 break-words">Why I Started coach lilian's community</h3>
                   <p className="text-[#C9D1D9] leading-relaxed mb-8">
                     My motivation came from three powerful realizations that changed everything:
                   </p>
@@ -200,9 +200,9 @@ export default function CEOStorySection() {
             {activeTab === 'philosophy' && (
               <div className="space-y-6 animate-fadeIn">
                 <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-5 lg:p-8 border border-[#C9D1D9]/20">
-                  <h3 className="text-3xl font-bold text-white mb-6">My Teaching Philosophy</h3>
+                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-6 break-words">My Teaching Philosophy</h3>
                   <p className="text-[#C9D1D9] leading-relaxed mb-8">
-                    Over the years, I've developed core principles that guide how I teach and mentor. These beliefs shape every program at Lian work from home training:
+                    Over the years, I've developed core principles that guide how I teach and mentor. These beliefs shape every program at coach lilian's community:
                   </p>
 
                   <div className="space-y-4">
@@ -221,7 +221,7 @@ export default function CEOStorySection() {
                 <div className="bg-gradient-to-br from-[#EE7B30]/10 to-[#EE7B30]/5 backdrop-blur-xl rounded-3xl p-5 lg:p-8 border border-[#EE7B30]/30">
                   <h4 className="text-xl font-bold text-white mb-4">My Promise to You</h4>
                   <p className="text-[#F9F6F1] leading-relaxed">
-                    When you join Lian work from home training, you're not just getting a course, you're getting a mentor who genuinely cares about your success. I review student progress personally, celebrate every win, and am committed to helping you break through every barrier. Your success is my success.
+                    When you join Coach Lilian's community, you're not just getting a course, you're getting a mentor who genuinely cares about your success. I review student progress personally, celebrate every win, and am committed to helping you break through every barrier. Your success is my success.
                   </p>
                 </div>
               </div>
@@ -232,13 +232,13 @@ export default function CEOStorySection() {
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-6 lg:p-10 border border-[#C9D1D9]/20 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-white mb-4">
+            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 break-words">
               Ready to Start Your Transformation?
             </h3>
             <p className="text-[#C9D1D9] text-lg mb-8">
               Let me guide you on the same journey that changed my life. Together, we'll unlock your potential and build the freedom you deserve.
             </p>
-            <Link to = "/join-class" className="group bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white font-bold px-10 py-4 rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(238,123,48,0.6)] hover:scale-105 flex items-center justify-center gap-2 mx-auto w-fit">
+            <Link to = "/join-class" className="group bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white font-bold px-6 sm:px-10 py-4 rounded-full transition-all duration-300 hover:shadow-[0_0_40px_rgba(238,123,48,0.6)] hover:scale-105 flex items-center justify-center gap-2 mx-auto w-fit">
               <span>Get Started</span>
               <Heart className="w-5 h-5 group-hover:scale-110 transition-transform" />
             </Link>

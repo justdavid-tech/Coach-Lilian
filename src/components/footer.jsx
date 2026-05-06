@@ -11,13 +11,7 @@ export default function Footer() {
     { name: 'Contact', href: '/contact' }
   ];
 
-  const programs = [
-    { name: 'Telegram Community', href: '/community' },
-    { name: 'Remote Job Training', href: '/training' },
-    { name: 'General Training', href: '/general-training' },
-    { name: 'Financial Freedom', href: '/financial-freedom' },
-    { name: 'Personal Mentorship', href: '/personal-mentorship' }
-  ];
+
 
   const resources = [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -54,7 +48,7 @@ export default function Footer() {
               <h3 className="text-3xl lg:text-4xl font-bold mb-4">
                 Stay Updated with{' '}
                 <span className="bg-gradient-to-r from-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent">
-                  Lian work from home training
+                  Coach lilian's community
                 </span>
               </h3>
               <p className="text-[#C9D1D9] text-lg">
@@ -79,12 +73,12 @@ export default function Footer() {
 
       {/* Main Footer Content */}
       <div className="relative max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <div className="mb-6">
               <h2 className="text-3xl font-bold bg-gradient-to-r from-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent">
-                Lian work from home training
+                Coach Lilian's community
               </h2>
               <p className="text-[#C9D1D9] mt-4 leading-relaxed">
                 Empowering individuals to achieve remote career success and financial freedom through expert coaching and comprehensive training programs.
@@ -143,23 +137,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Programs */}
-          <div>
-            <h4 className="text-white font-bold text-lg mb-6">Programs</h4>
-            <ul className="space-y-3">
-              {programs.map((program) => (
-                <li key={program.name}>
-                  <a
-                    href={program.href}
-                    className="text-[#C9D1D9] hover:text-[#EE7B30] transition-colors flex items-center gap-2 group"
-                  >
-                    <ArrowRight className="w-4 h-4 opacity-0 -ml-6 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300" />
-                    <span>{program.name}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+
 
           {/* Resources */}
           <div>
@@ -181,10 +159,10 @@ export default function Footer() {
         </div>
 
         {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 p-8 bg-gradient-to-r from-[#F9F6F1]/5 to-[#F9F6F1]/10 rounded-3xl border border-[#C9D1D9]/10">
+        <div className="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-6 mb-12 p-8 bg-gradient-to-r from-[#F9F6F1]/5 to-[#F9F6F1]/10 rounded-3xl border border-[#C9D1D9]/10">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
-              <div className="text-3xl font-bold text-[#EE7B30] mb-2">{stat.value}</div>
+              <div className="text-2xl font-bold text-[#EE7B30] mb-2">{stat.value}</div>
               <div className="text-[#C9D1D9] text-sm">{stat.label}</div>
             </div>
           ))}
@@ -194,7 +172,7 @@ export default function Footer() {
         <div className="pt-8 border-t border-[#C9D1D9]/10">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-[#C9D1D9] text-sm text-center md:text-left">
-              © {new Date().getFullYear()} Lian work from home training. All rights reserved.
+              © {new Date().getFullYear()} Coach Lilian's community. All rights reserved.
             </p>
 
             <div className="flex gap-6 text-sm">

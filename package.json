@@ -11,10 +11,15 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@portabletext/react": "^6.1.0",
+    "@sanity/client": "^7.22.0",
+    "@sanity/image-url": "^2.1.1",
     "@tailwindcss/vite": "^4.1.17",
+    "aos": "^2.3.4",
     "lucide-react": "^0.556.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.10.1",
     "tailwindcss": "^4.1.17"
   },

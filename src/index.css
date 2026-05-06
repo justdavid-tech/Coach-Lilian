@@ -16,6 +16,7 @@
   --color-text-dark: #0A0A0A;
 }
 
-/* * {
-  outline: 2px solid red;
-} */
+body {
+  overflow-x: hidden;
+}
+

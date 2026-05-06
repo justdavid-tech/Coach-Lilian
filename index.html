@@ -1,13 +1,280 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/v" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>workfromhome</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  
+  <!-- ── Primary Meta Tags ───────────────────────────────────────── -->
+  <title>Coach Lilian | Land Your First Remote Job. No Experience Required</title>
+  <meta name="title" content="Coach Lilian | Land Your First Remote Job. No Experience Required" />
+  <meta name="description" content="Join 1,200+ students who landed their first remote job with zero experience. Get expert coaching, job placement support, and proven strategies starting from FREE." />
+  <meta name="keywords" content="remote jobs, work from home, remote work Nigeria, no experience remote jobs, remote job training, Coach Lilian, work from home jobs Nigeria, virtual assistant, freelancing, remote career coach, telemarketing jobs, sales jobs remote, entry level remote jobs" />
+  <meta name="author" content="Coach Lilian" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  
+  <!-- ── Open Graph / Facebook / LinkedIn ────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coach-lilian.vercel.app/" />
+  <meta property="og:title" content="Coach Lilian | Land Your First Remote Job. No Experience Required" />
+  <meta property="og:description" content="Join 1,200+ students who landed their first remote job with zero experience. Get expert coaching, job placement support, and proven strategies." />
+  <meta property="og:image" content="https://coach-lilian.vercel.app/logo.png" />
+  <meta property="og:image:alt" content="Coach Lilian - Remote Job Training Success - 1200+ Students Trained, 92% Success Rate" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Coach Lilian" />
+  <meta property="og:locale" content="en_NG" />
+  
+  <!-- ── Twitter Card ────────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://coach-lilian.vercel.app/" />
+  <meta name="twitter:title" content="Coach Lilian | Land Your First Remote Job — No Experience Required" />
+  <meta name="twitter:description" content="Join 1,200+ students who landed their first remote job with zero experience. Start your journey today!" />
+  <meta name="twitter:image" content="https://coach-lilian.vercel.app/logo.png" />
+  <meta name="twitter:image:alt" content="Coach Lilian Remote Job Training - From Zero to Remote Worker" />
+  <meta name="twitter:creator" content="@coach_lilian" />
+  <meta name="twitter:site" content="@coach_lilian" />
+  
+  <!-- ── Canonical URL ──────────────────────────────────────────── -->
+  <link rel="canonical" href="https://coach-lilian.vercel.app/" />
+  
+  <!-- ── Favicon (All Devices) ───────────────────────────────────── -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#EE7B30" />
+  <meta name="msapplication-TileColor" content="#EE7B30" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  
+  <!-- ── Geo Tags (Nigeria focused) ─────────────────────────────── -->
+  <meta name="geo.region" content="NG" />
+  <meta name="geo.placename" content="Nigeria" />
+  <meta name="geo.position" content="9.081999;8.675277" />
+  <meta name="ICBM" content="9.081999, 8.675277" />
+  
+  <!-- ── Business & Mobile Specific ──────────────────────────────── -->
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Coach Lilian" />
+  
+  <!-- ── Theme Color ────────────────────────────────────────────── -->
+  <meta name="theme-color" content="#EE7B30" />
+  
+  <!-- ── Verification (Add your codes when you get them) ────────── -->
+  <!-- <meta name="google-site-verification" content="your-google-verification-code" /> -->
+  <!-- <meta name="facebook-domain-verification" content="your-facebook-verification-code" /> -->
+  
+  <!-- ── Structured Data / JSON-LD for SEO ──────────────────────── -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Coach Lilian",
+      "alternateName": "Coach Lilian Remote Job Training",
+      "url": "https://coach-lilian.vercel.app/",
+      "logo": "https://coach-lilian.vercel.app/logo.png",
+      "image": "https://coach-lilian.vercel.app/logo.png",
+      "description": "Remote job training and coaching platform helping Nigerians land their first remote job with no experience required. We offer Telegram community, general training, personal mentorship, and financial freedom programs.",
+      "sameAs": [
+        "https://t.me/your-group-link",
+        "https://instagram.com/coach_lilian",
+        "https://twitter.com/coach_lilian",
+        "https://facebook.com/coachlilian"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "NG",
+        "addressRegion": "Nigeria"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Lilian",
+        "jobTitle": "Remote Career Coach",
+        "description": "Certified career coach helping Africans transition to remote work",
+        "sameAs": [
+          "https://instagram.com/coach_lilian",
+          "https://twitter.com/coach_lilian"
+        ]
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Telegram Community",
+          "description": "Free remote work community with job opportunities and resources",
+          "price": "0",
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/OnlineOnly",
+          "url": "https://t.me/your-group-link"
+        },
+        {
+          "@type": "Offer",
+          "name": "General Training",
+          "description": "2-day remote job training program",
+          "price": "30000",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/OnlineOnly"
+        },
+        {
+          "@type": "Offer",
+          "name": "Personal Mentorship",
+          "description": "1-on-1 personalized career coaching",
+          "price": "250000",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/OnlineOnly"
+        },
+        {
+          "@type": "Offer",
+          "name": "Financial Freedom with Lilian",
+          "description": "Forex trading mastery program",
+          "price": "160000",
+          "priceCurrency": "NGN",
+          "availability": "https://schema.org/OnlineOnly"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "500",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "numberOfStudents": "1200",
+      "founders": {
+        "@type": "Person",
+        "name": "Lilian",
+        "description": "Remote Career Coach"
+      }
+    }
+  </script>
+  
+  <!-- ── BreadcrumbList Structured Data ─────────────────────────── -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://coach-lilian.vercel.app/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Programs",
+          "item": "https://coach-lilian.vercel.app/programs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Contact",
+          "item": "https://coach-lilian.vercel.app/contact"
+        }
+      ]
+    }
+  </script>
+  
+  <!-- ── FAQ Structured Data ─────────────────────────────────────── -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need prior experience to join the class?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No experience is needed. Our program is designed for beginners and professionals looking to switch to remote work."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the job guaranteed after completing the course?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "While we provide expert guidance and job application strategies, securing a job depends on your effort and interviews."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long is the training program?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our main remote job coaching program runs for 2 days, with recorded materials for flexibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are there any hidden fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, the price you get covers all materials, coaching, and access to our community."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I get support after the course ends?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Students have access to our private telegram group and alumni network for ongoing support."
+          }
+        }
+      ]
+    }
+  </script>
+  
+  <!-- ── Organization Structured Data ────────────────────────────── -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Coach Lilian",
+      "url": "https://coach-lilian.vercel.app/",
+      "logo": "https://coach-lilian.vercel.app/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://coach-lilian.vercel.app/contact",
+        "availableLanguage": ["English"]
+      },
+      "sameAs": [
+        "https://t.me/your-group-link",
+        "https://instagram.com/coach_lilian",
+        "https://twitter.com/coach_lilian",
+        "https://facebook.com/coachlilian"
+      ]
+    }
+  </script>
+  
+  <!-- ── WebSite Structured Data ─────────────────────────────────── -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Coach Lilian",
+      "url": "https://coach-lilian.vercel.app/",
+      "description": "Remote job training platform helping Nigerians land their first remote job",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://coach-lilian.vercel.app/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
+  
+  <title>Coach Lilian | Land Your First Remote Job — No Experience Required</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

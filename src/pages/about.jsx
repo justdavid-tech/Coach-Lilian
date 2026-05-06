@@ -74,7 +74,7 @@ export default function AboutHero() {
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyMDEsIDIwOSwgMjE3LCAwLjA1KSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-30"></div>
 
-      <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-32">
+      <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-16 lg:mt-0">
         {/* Hero Content */}
         <div className="text-center mb-20">
           <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
@@ -85,7 +85,7 @@ export default function AboutHero() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6">
               <span className="text-white">Empowering</span>
               <br />
               <span className="bg-gradient-to-r from-[#EE7B30] via-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent">
@@ -99,11 +99,10 @@ export default function AboutHero() {
             </p>
 
             {/* Stats */}
-            <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {[
                 { value: `${currentValue.toLocaleString()}+`, label: 'Lives Transformed' },
                 { value: '6+', label: 'Years of Impact' },
-                { value: '10+', label: 'Countries Reached' },
                 { value: '92%', label: 'Success Rate' }
               ].map((stat, index) => (
                 <div 
@@ -111,7 +110,7 @@ export default function AboutHero() {
                   className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-2xl p-6 border border-[#C9D1D9]/20 hover:border-[#EE7B30]/50 transition-all duration-300 hover:scale-105"
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <div className="text-4xl font-bold text-[#EE7B30] mb-2">{stat.value}</div>
+                  <div className="text-2xl font-bold text-[#EE7B30] mb-2">{stat.value}</div>
                   <div className="text-[#C9D1D9] text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -126,7 +125,7 @@ export default function AboutHero() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#EE7B30] to-[#EE7B30]/70 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
               <Target className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Our Mission</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
             <p className="text-[#C9D1D9] text-lg leading-relaxed">
               To provide access to remote work opportunities by providing world-class training, mentorship, and support. We're committed to breaking down barriers and creating pathways to financial freedom for everyone, everywhere.
             </p>
@@ -137,7 +136,7 @@ export default function AboutHero() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#EE7B30] to-[#EE7B30]/70 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
               <Globe className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-3xl font-bold text-white mb-4">Our Vision</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
             <p className="text-[#C9D1D9] text-lg leading-relaxed">
               A world where geography doesn't determine destiny. We envision a future where millions of people have the skills, confidence, and opportunities to thrive in the global remote workforce and achieve true work-life balance.
             </p>
@@ -147,7 +146,7 @@ export default function AboutHero() {
         {/* Core Values */}
         <div className={`mb-20 transition-all duration-1000 delay-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <div className="text-center mb-12">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
               Our Core{' '}
               <span className="bg-gradient-to-r from-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent">
                 Values
@@ -197,7 +196,7 @@ export default function AboutHero() {
         </div>
       </div>
     </div>
-    <CEOStorySection/>
+    <CEOStorySection />
     <Footer/>
     </>
   );

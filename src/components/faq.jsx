@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
 
 const faqs = [
@@ -26,35 +26,15 @@ const faqs = [
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
-  const faqRefs = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('animate-fade-in-up');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    faqRefs.current.forEach((ref) => {
-      if (ref) observer.observe(ref);
-    });
-
-    return () => {
-      faqRefs.current.forEach((ref) => {
-        if (ref) observer.unobserve(ref);
-      });
-    };
-  }, []);
 
   return (
     <section className="bg-gradient-to-b from-[#0B1922] via-[#13262F] to-[#0B1922] py-10 sm:py-10 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+        <h2 
+          data-aos="fade-down"
+          data-aos-duration="800"
+          className="text-3xl md:text-4xl font-bold text-white mb-12 text-center"
+        >
           Frequently Asked Questions
         </h2>
 
@@ -62,21 +42,39 @@ export default function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              ref={(el) => (faqRefs.current[index] = el)}
-              className="border border-neutral-gray rounded-xl overflow-hidden shadow-lg transform transition-transform duration-500"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+              data-aos-duration="800"
+              data-aos-offset="50"
+              className="border border-neutral-gray rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-[0_0_30px_rgba(238,123,48,0.2)]"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full text-left px-6 py-4 bg-primary-dark text-white flex justify-between items-center font-semibold hover:bg-primary-accent hover:text-white duration-300"
+                className="w-full text-left px-6 py-4 bg-[#13262F] text-white flex justify-between items-center font-semibold hover:bg-[#EE7B30]/20 transition-all duration-300 group"
               >
-                <span>{faq.question}</span>
+                <span 
+                  data-aos="fade-right"
+                  data-aos-delay={index * 100 + 50}
+                  data-aos-duration="600"
+                  className="group-hover:text-[#EE7B30] transition-colors duration-300"
+                >
+                  {faq.question}
+                </span>
                 <ChevronDown
                   size={24}
-                  className={`transform transition-transform duration-300 ${openIndex === index ? 'rotate-180 text-primary-accent' : ''}`}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100 + 100}
+                  data-aos-duration="500"
+                  className={`transform transition-all duration-300 ${openIndex === index ? 'rotate-180 text-[#EE7B30]' : 'text-[#C9D1D9] group-hover:text-[#EE7B30]'}`}
                 />
               </button>
+              
               {openIndex === index && (
-                <div className="px-6 py-4 bg-background-soft text-primary-dark text-base md:text-lg">
+                <div 
+                  data-aos="fade-down"
+                  data-aos-duration="500"
+                  className="px-6 py-4 bg-[#0B1922]/50 text-[#C9D1D9] text-base md:text-lg border-t border-[#EE7B30]/20"
+                >
                   {faq.answer}
                 </div>
               )}

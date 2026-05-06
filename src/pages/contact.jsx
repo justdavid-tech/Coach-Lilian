@@ -137,21 +137,21 @@ export default function ContactPage() {
       title: 'Call Us',
       content: '+234 801 234 5678',
       link: 'tel:+2348012345678',
-      color: '#2E8B57'
+      color: '#EE7B30'
     },
     {
       icon: MessageCircle,
       title: 'WhatsApp',
       content: 'Join Our Community',
       link: 'https://chat.whatsapp.com/your-group-link',
-      color: '#25D366'
+      color: '#EE7B30'
     },
     {
       icon: MapPin,
       title: 'Location',
       content: 'Abuja, FCT, Nigeria',
       link: null,
-      color: '#C9D1D9'
+      color: '#EE7B30'
     }
   ];
 
@@ -175,7 +175,7 @@ export default function ContactPage() {
     <Navbar />
     <div className="min-h-screen bg-gradient-to-b from-[#13262F] via-[#0B1922] to-[#13262F]">
       {/* Hero Section */}
-      <div className="relative py-20 lg:py-32 overflow-hidden">
+      <div data-aos="fade-up" className="relative pt-32 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-96 h-96 bg-[#EE7B30] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2E8B57] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
@@ -188,7 +188,7 @@ export default function ContactPage() {
               <span className="text-[#C9D1D9] text-sm font-medium">We're Here to Help</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+            <h1 className="text-4xl lg:text-7xl font-bold text-white mb-6">
               Get In{' '}
               <span className="bg-gradient-to-r from-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent">
                 Touch
@@ -224,7 +224,7 @@ export default function ContactPage() {
             {/* Contact Form - 2 columns */}
             <div className="lg:col-span-2">
               <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-8 lg:p-10 border border-[#C9D1D9]/20">
-                <h2 className="text-3xl font-bold text-white mb-6">Send Us a Message</h2>
+                <h2 className="text-3xl sm:text-4xl md:text-3xl md:text-center whitespace-nowrap font-bold text-white mb-6">Send Us a Message</h2>
                 
                 {submitted ? (
                   <div className="text-center py-12">

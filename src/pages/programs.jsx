@@ -7,7 +7,6 @@ export default function ProgramsPage() {
   const [selectedProgram, setSelectedProgram] = useState(null);
 
   const programs = [
-
     {
       id: 'telegram',
       icon: MessageCircle,
@@ -146,11 +145,21 @@ export default function ProgramsPage() {
   ];
 
   const ProgramModal = ({ program, onClose }) => (
-    <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto">
-      <div className="relative bg-gradient-to-b from-[#13262F] to-[#0B1922] rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-[#C9D1D9]/20">
+    <div 
+      data-aos="fade-up"
+      data-aos-duration="500"
+      className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 overflow-y-auto"
+    >
+      <div 
+        data-aos="zoom-in"
+        data-aos-duration="600"
+        className="relative bg-gradient-to-b from-[#13262F] to-[#0B1922] rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-[#C9D1D9]/20"
+      >
         {/* Close Button */}
         <button
           onClick={onClose}
+          data-aos="fade-right"
+          data-aos-duration="500"
           className="sticky top-4 right-4 float-right w-10 h-10 bg-[#F9F6F1]/10 hover:bg-[#EE7B30] rounded-full flex items-center justify-center transition-all duration-300 z-10"
         >
           <X className="w-5 h-5 text-white" />
@@ -159,12 +168,35 @@ export default function ProgramsPage() {
         <div className="p-8">
           {/* Header */}
           <div className="mb-8">
-            <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${program.gradient} flex items-center justify-center mb-4`}>
+            <div 
+              data-aos="zoom-in"
+              data-aos-duration="600"
+              className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${program.gradient} flex items-center justify-center mb-4`}
+            >
               <program.icon className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-3xl font-bold text-white mb-2">{program.title}</h3>
-            <p className="text-[#C9D1D9] text-lg mb-4">{program.tagline}</p>
-            <div className="flex items-baseline gap-2">
+            <h3 
+              data-aos="fade-right"
+              data-aos-delay="100"
+              data-aos-duration="600"
+              className="text-3xl font-bold text-white mb-2"
+            >
+              {program.title}
+            </h3>
+            <p 
+              data-aos="fade-right"
+              data-aos-delay="150"
+              data-aos-duration="600"
+              className="text-[#C9D1D9] text-lg mb-4"
+            >
+              {program.tagline}
+            </p>
+            <div 
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="600"
+              className="flex items-baseline gap-2"
+            >
               <span className="text-4xl font-bold text-[#EE7B30]">{program.price}</span>
               <span className="text-[#C9D1D9] text-sm">{program.priceDetail}</span>
             </div>
@@ -172,10 +204,23 @@ export default function ProgramsPage() {
 
           {/* Full Features */}
           <div className="mb-8">
-            <h4 className="text-xl font-bold text-white mb-4">Everything Included:</h4>
+            <h4 
+              data-aos="fade-right"
+              data-aos-delay="250"
+              data-aos-duration="600"
+              className="text-xl font-bold text-white mb-4"
+            >
+              Everything Included:
+            </h4>
             <div className="grid gap-3">
               {program.features.map((feature, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-3 bg-[#F9F6F1]/5 rounded-xl">
+                <div 
+                  key={idx}
+                  data-aos="fade-left"
+                  data-aos-delay={300 + (idx * 50)}
+                  data-aos-duration="500"
+                  className="flex items-start gap-3 p-3 bg-[#F9F6F1]/5 rounded-xl"
+                >
                   <CheckCircle className="w-5 h-5 text-[#2E8B57] flex-shrink-0 mt-0.5" />
                   <span className="text-[#F9F6F1]">{feature}</span>
                 </div>
@@ -183,35 +228,26 @@ export default function ProgramsPage() {
             </div>
           </div>
 
-          {/* Curriculum/Timeline */}
-          {program.curriculum && (
-            <div className="mb-8">
-              <h4 className="text-xl font-bold text-white mb-4">Program Structure:</h4>
-              <div className="space-y-3">
-                {program.curriculum.map((item, idx) => (
-                  <div key={idx} className="flex items-start gap-4 p-4 bg-[#F9F6F1]/5 rounded-xl border border-[#C9D1D9]/10">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${program.gradient} flex items-center justify-center flex-shrink-0`}>
-                      <item.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <div className="text-[#EE7B30] font-semibold text-sm mb-1">
-                        {item.week || item.month}
-                      </div>
-                      <div className="text-white font-medium">{item.topic}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Testimonials */}
-          {program.testimonials && (
+          {program.testimonials && program.testimonials.length > 0 && (
             <div className="mb-8">
-              <h4 className="text-xl font-bold text-white mb-4">What Students Say:</h4>
+              <h4 
+                data-aos="fade-right"
+                data-aos-delay="400"
+                data-aos-duration="600"
+                className="text-xl font-bold text-white mb-4"
+              >
+                What Students Say:
+              </h4>
               <div className="grid gap-4">
                 {program.testimonials.map((testimonial, idx) => (
-                  <div key={idx} className="p-4 bg-[#F9F6F1]/5 rounded-xl border border-[#C9D1D9]/10">
+                  <div 
+                    key={idx}
+                    data-aos="fade-up"
+                    data-aos-delay={450 + (idx * 50)}
+                    data-aos-duration="500"
+                    className="p-4 bg-[#F9F6F1]/5 rounded-xl border border-[#C9D1D9]/10"
+                  >
                     <div className="flex gap-1 mb-2">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-4 h-4 fill-[#EE7B30] text-[#EE7B30]" />
@@ -227,6 +263,9 @@ export default function ProgramsPage() {
 
           {/* CTA */}
           <button
+            data-aos="flip-up"
+            data-aos-delay="550"
+            data-aos-duration="600"
             onClick={() => window.open(program.link, program.id === 'whatsapp' ? '_blank' : '_self')}
             className={`w-full group bg-gradient-to-r ${program.gradient} text-white font-bold py-4 px-6 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(238,123,48,0.5)] flex items-center justify-center gap-2`}
           >
@@ -243,7 +282,7 @@ export default function ProgramsPage() {
     <Navbar />
     <div className="min-h-screen bg-gradient-to-b from-[#13262F] via-[#0B1922] to-[#13262F]">
       {/* Hero Section */}
-      <div className="relative py-20 lg:py-32 overflow-hidden">
+      <div className="relative pt-32 lg:py-32 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-96 h-96 bg-[#EE7B30] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
@@ -252,35 +291,63 @@ export default function ProgramsPage() {
 
         <div className="relative max-w-7xl mx-auto px-6">
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#EE7B30]/10 border border-[#EE7B30]/30 rounded-full px-4 py-2 backdrop-blur-sm mb-6">
+          <div 
+            data-aos="fade-down"
+            data-aos-duration="800"
+            className="text-center mb-16"
+          >
+            <div 
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-aos-duration="600"
+              className="inline-flex items-center gap-2 bg-[#EE7B30]/10 border border-[#EE7B30]/30 rounded-full px-4 py-2 backdrop-blur-sm mb-6"
+            >
               <Sparkles className="w-4 h-4 text-[#EE7B30]" />
               <span className="text-[#C9D1D9] text-sm font-medium">Choose Your Path</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+            <h1 
+              data-aos="fade-up"
+              data-aos-delay="150"
+              data-aos-duration="800"
+              className="text-4xl lg:text-7xl font-bold text-white mb-6"
+            >
               Our{' '}
               <span className="bg-gradient-to-r from-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent">
                 Programs
               </span>
             </h1>
             
-            <p className="text-[#C9D1D9] text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed">
+            <p 
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+              className="text-[#C9D1D9] text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed"
+            >
               Whether you're just starting out or ready to build wealth, we have a program designed to transform your life
             </p>
           </div>
 
           {/* Programs Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {programs.map((program) => (
+            {programs.map((program, index) => (
               <div
                 key={program.id}
+                data-aos="fade-up"
+                data-aos-delay={index * 100 + 300}
+                data-aos-duration="800"
+                data-aos-offset="100"
                 className="relative group cursor-pointer"
                 onClick={() => setSelectedProgram(program)}
               >
                 {/* Popular Badge */}
                 {program.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
+                  <div 
+                    data-aos="fade-down"
+                    data-aos-delay={index * 100 + 350}
+                    data-aos-duration="600"
+                    className="absolute -top-4 left-1/2 -translate-x-1/2 z-10"
+                  >
                     <div className="bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg flex items-center gap-1 animate-pulse">
                       <Sparkles className="w-3 h-3" />
                       MOST POPULAR
@@ -291,15 +358,39 @@ export default function ProgramsPage() {
                 {/* Card */}
                 <div className="h-full bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-8 border border-[#C9D1D9]/20 group-hover:border-[#EE7B30] group-hover:shadow-[0_0_50px_rgba(238,123,48,0.4)] transition-all duration-500 group-hover:scale-105">
                   {/* Icon */}
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${program.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  <div 
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 100 + 400}
+                    data-aos-duration="600"
+                    className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${program.gradient} flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
+                  >
                     <program.icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Title & Price */}
-                  <h3 className="text-2xl font-bold text-white mb-2">{program.title}</h3>
-                  <p className="text-[#C9D1D9] text-sm mb-4">{program.tagline}</p>
+                  <h3 
+                    data-aos="fade-right"
+                    data-aos-delay={index * 100 + 450}
+                    data-aos-duration="600"
+                    className="text-2xl font-bold text-white mb-2"
+                  >
+                    {program.title}
+                  </h3>
+                  <p 
+                    data-aos="fade-right"
+                    data-aos-delay={index * 100 + 500}
+                    data-aos-duration="600"
+                    className="text-[#C9D1D9] text-sm mb-4"
+                  >
+                    {program.tagline}
+                  </p>
                   
-                  <div className="flex items-baseline gap-2 mb-6">
+                  <div 
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100 + 550}
+                    data-aos-duration="600"
+                    className="flex items-baseline gap-2 mb-6"
+                  >
                     <span className="text-3xl font-bold text-[#EE7B30]">{program.price}</span>
                     {program.price !== 'FREE' && (
                       <span className="text-[#C9D1D9] text-xs">one-time</span>
@@ -307,14 +398,25 @@ export default function ProgramsPage() {
                   </div>
 
                   {/* Description */}
-                  <p className="text-[#C9D1D9] mb-6 leading-relaxed line-clamp-3">
+                  <p 
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100 + 600}
+                    data-aos-duration="600"
+                    className="text-[#C9D1D9] mb-6 leading-relaxed line-clamp-3"
+                  >
                     {program.description}
                   </p>
 
                   {/* Quick Features */}
                   <div className="space-y-2 mb-6">
                     {program.whatYouGet.slice(0, 4).map((item, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
+                      <div 
+                        key={idx}
+                        data-aos="fade-left"
+                        data-aos-delay={index * 100 + 650 + (idx * 50)}
+                        data-aos-duration="500"
+                        className="flex items-center gap-2"
+                      >
                         <CheckCircle className="w-4 h-4 text-[#2E8B57] flex-shrink-0" />
                         <span className="text-[#F9F6F1] text-sm">{item}</span>
                       </div>
@@ -322,7 +424,12 @@ export default function ProgramsPage() {
                   </div>
 
                   {/* CTA */}
-                  <button className="w-full group/btn bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2">
+                  <button 
+                    data-aos="flip-up"
+                    data-aos-delay={index * 100 + 800}
+                    data-aos-duration="600"
+                    className="w-full group/btn bg-gradient-to-r from-[#EE7B30] to-[#EE7B30]/80 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
+                  >
                     <span>View Details</span>
                     <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                   </button>
@@ -332,29 +439,60 @@ export default function ProgramsPage() {
           </div>
 
           {/* Comparison Section */}
-          <div className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-10 border border-[#C9D1D9]/20">
-            <h2 className="text-3xl font-bold text-white text-center mb-8">
+          <div 
+            data-aos="fade-up"
+            data-aos-delay="900"
+            data-aos-duration="800"
+            data-aos-offset="50"
+            className="bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-10 border border-[#C9D1D9]/20"
+          >
+            <h2 
+              data-aos="fade-down"
+              data-aos-delay="1000"
+              data-aos-duration="600"
+              className="text-3xl font-bold text-white text-center mb-8"
+            >
               Not Sure Which Program Is Right for You?
             </h2>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center p-6 bg-[#13262F]/50 rounded-2xl">
+              <div 
+                data-aos="zoom-in"
+                data-aos-delay="1100"
+                data-aos-duration="600"
+                className="text-center p-6 bg-[#13262F]/50 rounded-2xl hover:bg-[#EE7B30]/10 transition-all duration-300 hover:scale-105"
+              >
                 <Users className="w-12 h-12 text-[#2E8B57] mx-auto mb-4" />
                 <h4 className="text-white font-bold mb-2">New to Remote Work?</h4>
                 <p className="text-[#C9D1D9] text-sm mb-4">Start with our free WhatsApp Community</p>
               </div>
-              <div className="text-center p-6 bg-[#13262F]/50 rounded-2xl">
+              <div 
+                data-aos="zoom-in"
+                data-aos-delay="1150"
+                data-aos-duration="600"
+                className="text-center p-6 bg-[#13262F]/50 rounded-2xl hover:bg-[#EE7B30]/10 transition-all duration-300 hover:scale-105"
+              >
                 <Briefcase className="w-12 h-12 text-[#EE7B30] mx-auto mb-4" />
                 <h4 className="text-white font-bold mb-2">Want a Remote Career?</h4>
                 <p className="text-[#C9D1D9] text-sm mb-4">Remote Job Training is perfect for you</p>
               </div>
-              <div className="text-center p-6 bg-[#13262F]/50 rounded-2xl">
+              <div 
+                data-aos="zoom-in"
+                data-aos-delay="1200"
+                data-aos-duration="600"
+                className="text-center p-6 bg-[#13262F]/50 rounded-2xl hover:bg-[#EE7B30]/10 transition-all duration-300 hover:scale-105"
+              >
                 <DollarSign className="w-12 h-12 text-[#C9D1D9] mx-auto mb-4" />
                 <h4 className="text-white font-bold mb-2">Ready to Build Wealth?</h4>
                 <p className="text-[#C9D1D9] text-sm mb-4">Financial Freedom is your next step</p>
               </div>
             </div>
             <div className="text-center">
-              <button className="group border-2 border-[#C9D1D9]/30 hover:border-[#EE7B30] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-[#EE7B30]/10">
+              <button 
+                data-aos="flip-up"
+                data-aos-delay="1300"
+                data-aos-duration="600"
+                className="group border-2 border-[#C9D1D9]/30 hover:border-[#EE7B30] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:bg-[#EE7B30]/10"
+              >
                 Schedule a Free Consultation
               </button>
             </div>

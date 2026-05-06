@@ -72,8 +72,8 @@ export default function JoinClassPage() {
         'Access to detailed course',
         'Passive income stream'
       ],
-      color: '#C9D1D9',
-      gradient: 'from-[#C9D1D9] to-[#C9D1D9]/60'
+      color: '#EE7B30',
+      gradient: 'from-[#EE7B30] to-[#EE7B30]/60'
     }
   ];
 
@@ -214,7 +214,7 @@ export default function JoinClassPage() {
     <Navbar />
     <div className="min-h-screen bg-gradient-to-b from-[#13262F] via-[#0B1922] to-[#13262F]">
       {/* Hero Section */}
-      <div className="relative py-20 overflow-hidden">
+      <div className="relative py-20 pt-40 overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-20 left-10 w-96 h-96 bg-[#EE7B30] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2E8B57] rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
@@ -227,10 +227,10 @@ export default function JoinClassPage() {
               <span className="text-[#C9D1D9] text-sm font-medium">Limited Spots Available</span>
             </div>
             
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
+            <h1 className="text-3xl lg:text-7xl font-bold text-white mb-6">
               Join{' '}
               <span className="bg-gradient-to-r from-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent">
-                Lian work from home training
+                Coach lilian's community 
               </span>
             </h1>
             
@@ -240,9 +240,8 @@ export default function JoinClassPage() {
           </div>
         </div>
       </div>
-
       {/* Main Content */}
-      <div className="relative max-w-7xl mx-auto px-6 pb-20">
+      <div className="relative max-w-7xl mx-auto px-6 mb-10">
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Left: Enrollment Form */}
           <div className="lg:col-span-2">
@@ -251,7 +250,7 @@ export default function JoinClassPage() {
                 <div className="w-24 h-24 bg-gradient-to-br from-[#2E8B57] to-[#2E8B57]/70 rounded-full flex items-center justify-center mx-auto mb-6 animate-pulse">
                   <CheckCircle className="w-12 h-12 text-white" />
                 </div>
-                <h2 className="text-4xl font-bold text-white mb-4">Welcome to Lian work from home training! 🎉</h2>
+                <h2 className="text-4xl font-bold text-white mb-4">Welcome to coach lilian's community!</h2>
                 <p className="text-[#C9D1D9] text-lg mb-6">
                   Your enrollment has been received. Check your email for next steps and payment instructions.
                 </p>

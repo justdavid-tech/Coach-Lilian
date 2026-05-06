@@ -9,8 +9,8 @@ function Navbar() {
     <header className="w-full bg-primary-dark text-white fixed top-0 left-0 z-50 shadow-xl">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold tracking-wide">
-          Lian work from home <span className="text-primary-accent">training</span>
+        <Link to="/" className="flex items-center">
+          <img src="/assets/logo.png" alt="Coach Lilian Logo" className="h-16 w-auto scale-150 origin-center" />
         </Link>
 
         {/* Desktop Menu */}
@@ -18,6 +18,7 @@ function Navbar() {
           <li><Link to="/" className="hover:text-primary-accent duration-300">Home</Link></li>
           <li><Link to="/about" className="hover:text-primary-accent duration-300">About</Link></li>
           <li><Link to="/programs" className="hover:text-primary-accent duration-300">Programs</Link></li>
+          <li><Link to="/insightspage" className="hover:text-primary-accent duration-300">Insights</Link></li>
           <li><Link to="/testimonies" className="hover:text-primary-accent duration-300">Testimonies</Link></li>
           <li><Link to="/contact" className="hover:text-primary-accent duration-300">Contact</Link></li>
         </ul>

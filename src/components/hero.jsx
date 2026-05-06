@@ -23,7 +23,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className='pt-8 sm:pt-10 md:pt-10 lg:pt-10 xl:pt-1'>
+    <section className='pt-15 sm:pt-15 md:pt-15 lg:pt-15 xl:pt-15'>
     <div className="relative min-h-screen bg-gradient-to-br from-[#13262F] via-[#0B1922] to-[#13262F] overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -46,7 +46,7 @@ export default function HeroSection() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
               <span className="text-white">Ready to land your</span>
               <br />
               <span className="bg-gradient-to-r from-[#EE7B30] via-[#EE7B30] to-[#C9D1D9] bg-clip-text text-transparent animate-pulse">
@@ -55,7 +55,7 @@ export default function HeroSection() {
             </h1>
 
             {/* Subheading */}
-            <p className="text-[#C9D1D9] text-xl lg:text-2xl leading-relaxed">
+            <p className="text-[#C9D1D9] text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
               Join thousands of learners who have transformed their careers with our expert coaching and hands-on training.
             </p>
 
@@ -76,12 +76,12 @@ export default function HeroSection() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link to="/programs" className="group relative bg-[#EE7B30] hover:bg-[#EE7B30]/90 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 hover:shadow-[0_0_30px_rgba(238,123,48,0.5)] hover:scale-105 flex items-center justify-center gap-2">
-                <span>Join the Lian work from home training Programs</span>
+                <span>Join the community</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               
-              <Link to="/testimonies" className="group border-2 border-[#C9D1D9]/30 hover:border-[#EE7B30] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm hover:bg-[#EE7B30]/10">
-                Watch Success Stories
+              <Link to="/testimonies" className="group text-center border-2 border-[#C9D1D9]/30 hover:border-[#EE7B30] text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 backdrop-blur-sm hover:bg-[#EE7B30]/10">
+                Success Stories
               </Link>
             </div>
 
