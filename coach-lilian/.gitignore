@@ -27,3 +27,10 @@
 
 # Dotenv and similar local-only files
 *.local
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
