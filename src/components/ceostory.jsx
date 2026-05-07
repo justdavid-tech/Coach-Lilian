@@ -62,7 +62,7 @@ export default function CEOStorySection() {
           </h2>
           
           <p className="text-[#C9D1D9] text-lg lg:text-xl max-w-3xl mx-auto leading-relaxed">
-            CEO & Founder of WorkFromHome with Lilian
+            CEO & Founder
           </p>
         </div>
 

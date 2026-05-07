@@ -22,7 +22,8 @@
   --color-text-dark: #0A0A0A;
 }
 
+html,
 body {
   overflow-x: hidden !important;
-
+  max-width: 100%;
 }

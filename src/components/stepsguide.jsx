@@ -240,7 +240,7 @@ export default function StepsGuideSection() {
                 <div className="absolute left-10 top-20 bottom-0 w-0.5 bg-gradient-to-b from-[#EE7B30] to-[#2E8B57] opacity-30"></div>
               )}
 
-              <div className="flex gap-6">
+              <div className="flex gap-3 min-w-0">
                 {/* Step Icon */}
                 <div 
                   data-aos="zoom-in"
@@ -261,7 +261,7 @@ export default function StepsGuideSection() {
                   data-aos="fade-left"
                   data-aos-delay={index * 150 + 500}
                   data-aos-duration="800"
-                  className="flex-1 bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-6 border border-[#C9D1D9]/20"
+                  className="flex-1 min-w-0 bg-gradient-to-br from-[#F9F6F1]/10 to-[#F9F6F1]/5 backdrop-blur-xl rounded-3xl p-6 border border-[#C9D1D9]/20"
                 >
                   <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-[#C9D1D9] mb-4 leading-relaxed">{step.description}</p>
